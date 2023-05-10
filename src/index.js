@@ -18,7 +18,7 @@ exports.handler = async (event) => {
         'FallbackIntent': intents.fallback
     };
 
-    const respostaGenerica = {
+    const genericResponse = {
         "sessionState": {
             "dialogAction": {
                 "type": "ElicitIntent",
@@ -36,5 +36,5 @@ exports.handler = async (event) => {
     };
 
     sessionAttributes.controllers = sessionAttributes.controllers || JSON.stringify(controllers);
-    return await intentsController[intent.name] ? intentsController[intent.name](event) : respostaGenerica;
+    return await intentsController[intent.name] ? intentsController[intent.name](event) : genericResponse;
 };

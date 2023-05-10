@@ -8,7 +8,7 @@ const finishResponses = {
 
     cantFinishOrderMessage() {
         return {
-            message: 'Não há nada no seu carrinho. Gostaria de ver o nosso cardápio?',
+            message: 'Não há pedidos no seu carrinho. Gostaria de ver o nosso cardápio?',
             fallback: 'Desculpe, não entendi. Gostaria de ver o nosso cardápio?'
         }
     }
